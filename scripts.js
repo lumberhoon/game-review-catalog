@@ -120,6 +120,29 @@ function showCards(games) {
     devItem.textContent = "Developer: " + game.developer
     cardContent.insertBefore(devItem, ul)
 
+    const platform = {
+      "PS5": "assets/ps.avif",
+      "XBOX": "assets/xbox.png",
+      "STEAM": "assets/steam.png",
+      "SWITCH": "assets/switch2.png",
+      "N64": "assets/n64.png",
+      "WIIU": "assets/wiiu.png"
+    };
+
+    for (let i = 0; i < game.platform.length; i++){
+      const platItem = document.createElement("img");
+      platItem.src = platform[game.platform[i]]
+      platItem.style.width = "auto";
+      platItem.style.height = "30px";
+      platItem.style.objectFit = "contain";
+      platItem.style.marginRight = "5px";
+      cardContent.insertBefore(platItem, ul)
+    }
+    
+
+
+
+
     const hint = document.createElement("p");
     hint.textContent = "Click to Expand";
     hint.className = "expand-hint";
