@@ -64,6 +64,24 @@ fetch('games.json')
       showCards(sorted);
     })  
     
+    document.getElementById("genre-filter").addEventListener("change", function() {
+      let genreValue = this.value;
+      let filtered = []
+
+      if (genreValue === "all"){
+        showCards(games);
+        return;
+      }
+
+      for (let i = 0; i < games.length; i++){
+        if (games[i].genre.includes(genreValue)) {
+          filtered.push(games[i])
+        }
+      }
+      showCards(filtered)
+    })
+
+
     });
 
 
@@ -84,11 +102,16 @@ function showCards(games) {
     const image = nextCard.querySelector("img");
     image.src = game.coverArt
 
-
-
     const ul = nextCard.querySelector("ul");
     ul.innerHTML = "";
     ul.style.display = "none";
+
+    if (game.mustPlay) {
+      const badge = document.createElement("p");
+      badge.textContent = "⭐ Daniel's Must Play";
+      const cardContent = nextCard.querySelector(".card-content");
+      cardContent.insertBefore(badge, ul);
+    }
 
 
     nextCard.addEventListener("click", function() {
@@ -100,19 +123,26 @@ function showCards(games) {
       }
     });
 
-    if (game.mustPlay) {
-      const badge = document.createElement("p");
-      badge.textContent = "⭐ Daniel's Must Play";
-      nextCard.querySelector(".card-content").appendChild(badge);
-    }
+    
 
     const genreItem = document.createElement("p");
     genreItem.textContent = "Genre: " + game.genre.join(", ");
     ul.appendChild(genreItem)
 
   
+    
+    
     const difficultyItem = document.createElement("p");
     difficultyItem.textContent = "Difficulty: " + game.difficulty
+    
+    const difficultyColors = {
+      "Plays Itself": "difficulty-easy",
+      "Enjoy the Story": "difficulty-medium",
+      "Hold Your Breath": "difficulty-hard",
+      "Monitor Breaker": "difficulty-extreme"
+      };
+
+    difficultyItem.className = difficultyColors[game.difficulty];
     ul.appendChild(difficultyItem);
 
     

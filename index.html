@@ -21,11 +21,20 @@
         <option value = "difficulty-high">Difficulty: High to Low</option>
         <option value = "difficulty-low">Difficulty: Low to High</option>
       </select>
+      <select id = "genre-filter">
+        <option value = "all">All Genres</option>
+        <option value = "RPG">RPG</option>
+        <option value = "Survival Horror">Survival Horror</option>
+        <option value = "Adventure">Adventure</option>
+        <option value = "Roguelike">Roguelike</option>
+        <option value = "Soulslike">Soulslike</option>
+        <option value="First-person shooter">First-person shooter</option>
+      </select>
       </div>
     <div id="card-container"></div>
     <div class="card" style="display: none">
       <div class="card-content">
-        <h2>TV Show Title</h2>
+        <h2></h2>
         <img src="" alt="TV Show Poster" />
         <ul>
           <li>Bullet Point 1</li>
@@ -33,10 +42,6 @@
           <li>Bullet Point 3</li>
         </ul>
       </div>
-    </div>
-    <div class="footer">
-      <button onclick="quoteAlert()">Get A Quote!</button>
-      <button onclick="removeLastCard()">Remove A Card!</button>
     </div>
   </body>
 </html>
