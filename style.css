@@ -105,6 +105,12 @@ body {
     border-color: #FFFC00;
 }
 
+#mustplay-filter:not(.active) {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
 
 
 .card {
