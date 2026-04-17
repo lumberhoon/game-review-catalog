@@ -8,7 +8,7 @@ body {
 
 .main-header {
   background-color: #1a1a1a;
-  padding-bottom: 10px;
+  padding: 20px 0 20px 0;
 }
 
 .title {
@@ -19,6 +19,16 @@ body {
   font-weight: normal;
   color: white;
 }
+
+.subtitle {
+  text-align: center;
+    color: #888;
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.1em;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
 
 #card-container {
   display: grid;
@@ -49,6 +59,14 @@ body {
     width: 250px;
 }
 
+#game-count {
+    color: #888;
+    font-size: 14px;
+    font-family: "Exo 2", sans-serif;
+    margin: 0;
+}
+
+
 #sort-select, #genre-filter {
     padding: 10px 15px;
     border-radius: 8px;
@@ -60,12 +78,31 @@ body {
     cursor: pointer;
 }
 
+#mustplay-filter {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    font-family: "Exo 2", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#mustplay-filter:hover {
+    background-color: #4caf50;
+    border-color: #4caf50;
+}
+
+
+
 .card {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   width: 100%;
   background-color: #1e1e1e;
   border: 1px solid #333;
+  border-top: 3px solid #4caf50;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 4);
   margin: 5px;
@@ -84,13 +121,21 @@ body {
 
 .card-content h2 {
   margin-top: 0;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffff;
 }
 
 .card img {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.expand-hint {
+  color: #666;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 .footer {
@@ -113,6 +158,14 @@ button {
   cursor: pointer;
   margin: 5px;
 }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
 
 .difficulty-easy { color: #4caf50; }
 .difficulty-medium { color: #ff9800; }

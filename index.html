@@ -11,6 +11,7 @@
   <body>
     <header class="main-header">
       <h1 class="title">Video Game Reviews</h1>
+      <p class = "subtitle">Daniel's video game reviews, ratings, and recommendation</p>
     </header>
     <div id = "controls">
       <input type = "text" id = "search-bar" placeholder = "Search games...">
@@ -20,6 +21,8 @@
         <option value = "rating-low">Rating: Low to High</option>
         <option value = "difficulty-high">Difficulty: High to Low</option>
         <option value = "difficulty-low">Difficulty: Low to High</option>
+        <option value = "release-latest">Release Year: Latest to Oldest</option>
+        <option value = "release-oldest">Release Year: Oldest to Latest</option>
       </select>
       <select id = "genre-filter">
         <option value = "all">All Genres</option>
@@ -28,8 +31,12 @@
         <option value = "Adventure">Adventure</option>
         <option value = "Roguelike">Roguelike</option>
         <option value = "Soulslike">Soulslike</option>
-        <option value="First-person shooter">First-person shooter</option>
+        <option value = "First-person shooter">First-person shooter</option>
+        <option value = "Fighting">Fighting</option>
+        <option value = "Action">Action</option>
       </select>
+      <button id="mustplay-filter">⭐ Must Play Only</button>
+      <p id = "game-count"></p>
       </div>
     <div id="card-container"></div>
     <div class="card" style="display: none">

@@ -1,32 +1,9 @@
-/**
- * Data Catalog Project Starter Code - SEA Stage 2
- *
- * This file is where you should be doing most of your work. You should
- * also make changes to the HTML and CSS files, but we want you to prioritize
- * demonstrating your understanding of data structures, and you'll do that
- * with the JavaScript code you write in this file.
- *
- * The comments in this file are only to help you learn how the starter code
- * works. The instructions for the project are in the README. That said, here
- * are the three things you should do first to learn about the starter code:
- * - 1 - Change something small in index.html or style.css, then reload your
- *    browser and make sure you can see that change.
- * - 2 - On your browser, right click anywhere on the page and select
- *    "Inspect" to open the browser developer tools. Then, go to the "console"
- *    tab in the new window that opened up. This console is where you will see
- *    JavaScript errors and logs, which is extremely helpful for debugging.
- *    (These instructions assume you're using Chrome, opening developer tools
- *    may be different on other browsers. We suggest using Chrome.)
- * - 3 - Add another string to the titles array a few lines down. Reload your
- *    browser and observe what happens. You should see a fourth "card" appear
- *    with the string you added to the array, but a broken image.
- *
- */
 
 fetch('games.json')
   .then(response => response.json())
   .then(games => {
     showCards(games);
+    let clicked = false;
 
     document.getElementById("search-bar").addEventListener("input", function() {
       let filtered = [];
@@ -55,7 +32,9 @@ fetch('games.json')
         "rating-high": function(a, b) {return b.rating - a.rating;},
         "rating-low": function(a, b) {return a.rating - b.rating;},
         "difficulty-high": function(a, b) {return difficultyRank[b.difficulty] - difficultyRank[a.difficulty];},
-        "difficulty-low": function(a, b) {return difficultyRank[a.difficulty] - difficultyRank[b.difficulty];}
+        "difficulty-low": function(a, b) {return difficultyRank[a.difficulty] - difficultyRank[b.difficulty];},
+        "release-latest": function(a, b) {return b.releaseYear - a.releaseYear;},
+        "release-oldest": function(a, b) {return a.releaseYear - b.releaseYear;}
       };
 
       let sorted = [...games];
@@ -64,7 +43,7 @@ fetch('games.json')
       showCards(sorted);
     })  
     
-    document.getElementById("genre-filter").addEventListener("change", function() {
+    document.getElementById("genre-filter").addEventListener("change", function(){
       let genreValue = this.value;
       let filtered = []
 
@@ -74,18 +53,39 @@ fetch('games.json')
       }
 
       for (let i = 0; i < games.length; i++){
-        if (games[i].genre.includes(genreValue)) {
+        if (games[i].genre.includes(genreValue)){
           filtered.push(games[i])
         }
       }
       showCards(filtered)
     })
 
+    document.getElementById("mustplay-filter").addEventListener("click", function(){
+      let filtered = []
+      
+      if (clicked === false){
+        for (let i = 0; i < games.length; i++){
+        if (games[i].mustPlay === true){
+          filtered.push(games[i]);
+          }
+        }
+        clicked = true
+        showCards(filtered);
+      }
+      else{
+        showCards(games);
+        clicked = false
+      }
+
+    })
 
     });
 
 
 function showCards(games) {
+  
+  document.getElementById("game-count").textContent = "Showing " + games.length + " games";
+  
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
   const templateCard = document.querySelector(".card");
@@ -106,20 +106,36 @@ function showCards(games) {
     ul.innerHTML = "";
     ul.style.display = "none";
 
+    const cardContent = nextCard.querySelector(".card-content");
+
     if (game.mustPlay) {
       const badge = document.createElement("p");
       badge.textContent = "⭐ Daniel's Must Play";
-      const cardContent = nextCard.querySelector(".card-content");
       cardContent.insertBefore(badge, ul);
     }
+
+    const dateItem = document.createElement("p");
+    dateItem.textContent = "Release: " + game.releaseYear
+    cardContent.insertBefore(dateItem, ul)
+
+    const devItem = document.createElement("p");
+    devItem.textContent = "Developer: " + game.developer
+    cardContent.insertBefore(devItem, ul)
+
+    const hint = document.createElement("p");
+    hint.textContent = "Click to Expand";
+    hint.className = "expand-hint";
+    cardContent.insertBefore(hint, ul);
 
 
     nextCard.addEventListener("click", function() {
       if (ul.style.display === "none") {
         ul.style.display = "block";
+        hint.textContent = "Click to Collapse"
       }
       else {
         ul.style.display = "none";
+        hint.textContent = "Click to Expand"
       }
     });
 
@@ -145,7 +161,9 @@ function showCards(games) {
     difficultyItem.className = difficultyColors[game.difficulty];
     ul.appendChild(difficultyItem);
 
-    
+    const timeItem = document.createElement("p");
+    timeItem.textContent = "Playtime: " + game.playtime + "hrs +"
+    ul.appendChild(timeItem)
 
     const statusItem = document.createElement("p");
     statusItem.textContent = "Completion: " + game.status;
@@ -153,7 +171,7 @@ function showCards(games) {
 
 
     const ratingItem = document.createElement("p");
-    if (game.rating == 8){
+    if (game.rating === 8){
       ratingItem.textContent = "Rating: It's a Byte!"
     }
     else {
