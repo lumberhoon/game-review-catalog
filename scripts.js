@@ -23,75 +23,122 @@
  *
  */
 
-const FRESH_PRINCE_URL =
-  "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg";
-const CURB_POSTER_URL =
-  "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
-const EAST_LOS_HIGH_POSTER_URL =
-  "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
+fetch('games.json')
+  .then(response => response.json())
+  .then(games => {
+    showCards(games);
 
-// This is an array of strings (TV show titles)
-let titles = [
-  "Fresh Prince of Bel Air",
-  "Curb Your Enthusiasm",
-  "East Los High",
-];
-// Your final submission should have much more data than this, and
-// you should use more than just an array of strings to store it all.
+    document.getElementById("search-bar").addEventListener("input", function() {
+      let filtered = [];
+      let query = this.value;
+      
+      for (let i = 0; i < games.length; i++){
+        if (games[i].title.toLowerCase().includes(query.toLowerCase())) {
+          filtered.push(games[i]);
+        }
+      }
+      showCards(filtered)
 
-// This function adds cards the page to display the data in the array
-function showCards() {
+    })
+
+    document.getElementById("sort-select").addEventListener("change", function() {
+      let sortValue = this.value;
+
+      const difficultyRank = {
+        "Plays Itself": 1,
+        "Enjoy the Story": 2,
+        "Hold Your Breath": 3,
+        "Monitor Breaker": 4
+      };
+      
+      const sortFunctions = {
+        "rating-high": function(a, b) {return b.rating - a.rating;},
+        "rating-low": function(a, b) {return a.rating - b.rating;},
+        "difficulty-high": function(a, b) {return difficultyRank[b.difficulty] - difficultyRank[a.difficulty];},
+        "difficulty-low": function(a, b) {return difficultyRank[a.difficulty] - difficultyRank[b.difficulty];}
+      };
+
+      let sorted = [...games];
+      sorted.sort(sortFunctions[sortValue]); 
+      
+      showCards(sorted);
+    })  
+    
+    });
+
+
+function showCards(games) {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
   const templateCard = document.querySelector(".card");
 
-  for (let i = 0; i < titles.length; i++) {
-    let title = titles[i];
+  for (let i = 0; i < games.length; i++){
+    let game = games[i];
+    
+    const nextCard = templateCard.cloneNode(true);
+    nextCard.style.display = "block";
+    
+    const title = nextCard.querySelector("h2");
+    title.textContent = game.title;
 
-    // This part of the code doesn't scale very well! After you add your
-    // own data, you'll need to do something totally different here.
-    let imageURL = "";
-    if (i == 0) {
-      imageURL = FRESH_PRINCE_URL;
-    } else if (i == 1) {
-      imageURL = CURB_POSTER_URL;
-    } else if (i == 2) {
-      imageURL = EAST_LOS_HIGH_POSTER_URL;
+    const image = nextCard.querySelector("img");
+    image.src = game.coverArt
+
+
+
+    const ul = nextCard.querySelector("ul");
+    ul.innerHTML = "";
+    ul.style.display = "none";
+
+
+    nextCard.addEventListener("click", function() {
+      if (ul.style.display === "none") {
+        ul.style.display = "block";
+      }
+      else {
+        ul.style.display = "none";
+      }
+    });
+
+    if (game.mustPlay) {
+      const badge = document.createElement("p");
+      badge.textContent = "⭐ Daniel's Must Play";
+      nextCard.querySelector(".card-content").appendChild(badge);
     }
 
-    const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, title, imageURL); // Edit title and image
-    cardContainer.appendChild(nextCard); // Add new card to the container
+    const genreItem = document.createElement("p");
+    genreItem.textContent = "Genre: " + game.genre.join(", ");
+    ul.appendChild(genreItem)
+
+  
+    const difficultyItem = document.createElement("p");
+    difficultyItem.textContent = "Difficulty: " + game.difficulty
+    ul.appendChild(difficultyItem);
+
+    
+
+    const statusItem = document.createElement("p");
+    statusItem.textContent = "Completion: " + game.status;
+    ul.appendChild(statusItem)
+
+
+    const ratingItem = document.createElement("p");
+    if (game.rating == 8){
+      ratingItem.textContent = "Rating: It's a Byte!"
+    }
+    else {
+    ratingItem.textContent = "Rating: " + game.rating + "bits" + " out of Byte";
+    }
+    ul.appendChild(ratingItem);   
+
+
+    const reviewItem = document.createElement("p");
+    reviewItem.textContent = "Review: " + game.review
+    ul.appendChild(reviewItem)
+
+
+    
+    cardContainer.appendChild(nextCard);
   }
-}
 
-function editCardContent(card, newTitle, newImageURL) {
-  card.style.display = "block";
-
-  const cardHeader = card.querySelector("h2");
-  cardHeader.textContent = newTitle;
-
-  const cardImage = card.querySelector("img");
-  cardImage.src = newImageURL;
-  cardImage.alt = newTitle + " Poster";
-
-  // You can use console.log to help you debug!
-  // View the output by right clicking on your website,
-  // select "Inspect", then click on the "Console" tab
-  console.log("new card:", newTitle, "- html: ", card);
-}
-
-// This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
-
-function quoteAlert() {
-  console.log("Button Clicked!");
-  alert(
-    "I guess I can kiss heaven goodbye, because it got to be a sin to look this good!",
-  );
-}
-
-function removeLastCard() {
-  titles.pop(); // Remove last item in titles array
-  showCards(); // Call showCards again to refresh
 }

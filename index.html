@@ -1,16 +1,27 @@
 <!doctype html>
 <html>
   <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Danny's Game Review | Home</title>
+    <meta name="description" content="Personal Video Game Review and Recommendations" />
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="scripts.js"></script>
   </head>
 
   <body>
     <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
+      <h1 class="title">Video Game Reviews</h1>
     </header>
+    <div id = "controls">
+      <input type = "text" id = "search-bar" placeholder = "Search games...">
+      <select id = "sort-select">
+        <option value = "default">Sort By</option>
+        <option value = "rating-high">Rating: High to Low</option>
+        <option value = "rating-low">Rating: Low to High</option>
+        <option value = "difficulty-high">Difficulty: High to Low</option>
+        <option value = "difficulty-low">Difficulty: Low to High</option>
+      </select>
+      </div>
     <div id="card-container"></div>
     <div class="card" style="display: none">
       <div class="card-content">

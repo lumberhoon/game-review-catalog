@@ -1,0 +1,190 @@
+[
+{
+    "title": "Clair Obscur: Expedition 33",
+    "genre": ["RPG", "Action"],
+    "difficulty": "Hold Your Breath",
+    "rating": 8,
+    "review": "Clair Obscur: Expedition 33 is the best game I have played in the last few years. Created by Sanfall Interactive...",
+    "releaseYear": 2025,
+    "developer": "Sandfall Interactive",
+    "playtime": 150,
+    "mustPlay": true,
+    "status": "100%",
+    "coverArt": "https://upload.wikimedia.org/wikipedia/en/5/5a/Clair_Obscur%2C_Expedition_33_Cover_1.webp"
+
+},
+
+{
+    "title": "Resident Evil Village",
+    "genre": ["Survival Horror", "Action"],
+    "difficulty": "Enjoy the Story",
+    "rating": 6,
+    "review": "Resident Evil Village was a curve-ball after Resident Evil 7. When people expected another slow-burning horror game...",
+    "releaseYear": 2021,
+    "developer": "Capcom",
+    "playtime": 50,
+    "mustPlay": false,
+    "status": "Completed",
+    "coverArt": "https://upload.wikimedia.org/wikipedia/en/2/2c/Resident_Evil_Village.png"
+
+},
+
+{
+    "title": "Dark Souls III",
+    "genre": ["Soulslike", "Adventure"],
+    "difficulty": "Monitor Breaker",
+    "rating": 8,
+    "review": "Darks Souls III is my favorite Soulslike game still. It holds up well graphically...",
+    "releaseYear": 2016,
+    "developer": "FromSoftware",
+    "playtime": 90,
+    "mustPlay": true,
+    "status": "Completed",
+    "coverArt": "https://m.media-amazon.com/images/M/MV5BNzQzODQ3YzktNTM1Yy00NmNmLTk3NTItNGVlY2M1MzI4MjQ0XkEyXkFqcGc@._V1_.jpg"
+
+},
+
+
+{
+    "title": "Bioshock Infinite",
+    "genre": ["First-person shooter", "Action"],
+    "difficulty": "Enjoy the Story",
+    "rating": 7,
+    "review": "Bioshock Infinite takes the game's deep ocean setting into the sky. The beauiful graphics still hold up today in 2026...",
+    "releaseYear": 2013,
+    "developer": "Irrational Games",
+    "playtime": 40,
+    "mustPlay": true,
+    "status": "Completed",
+    "coverArt": "https://upload.wikimedia.org/wikipedia/en/a/a3/Official_cover_art_for_Bioshock_Infinite.jpg"
+
+},
+
+{
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "genre": ["Adventure", "Action"],
+    "difficulty": "Enjoy the Story",
+    "rating": 8,
+    "review": "The LoZ franchise hit a brick wall with their formula feeling too reptitive. That all changed when Nintendo took a 180 degree turn and completely changed their iconic formula...",
+    "releaseYear": 2017,
+    "developer": "Nintendo",
+    "playtime": 150,
+    "mustPlay": true,
+    "status": "Completed",
+    "coverArt": "https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg"
+
+},
+
+
+{
+    "title": "Detroit: Become Human",
+    "genre": ["Adventure", "Action"],
+    "difficulty": "Plays Itself",
+    "rating": 7,
+    "review": "Quantic Dream perfected their formula with Detroit: Become Human. A beautiful story game where every decision you make can impact the outcome of the story...",
+    "releaseYear": 2018,
+    "developer": "Quantic Dream",
+    "playtime": 20,
+    "mustPlay": true,
+    "status": "Completed",
+    "coverArt": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ee/Detroit_Become_Human.jpg/250px-Detroit_Become_Human.jpg"
+
+},
+
+
+{
+    "title": "The Legend of Zelda: Majora's Mask",
+    "genre": ["Adventure", "Action"],
+    "difficulty": "Enjoy the Story",
+    "rating": 8,
+    "review": "After the success of Ocarina of Time, Nintendo had a daunting task ahead of them. To make a game as good or better than OOT. Even with little time for development and recycling of models from OOT they have found the best solution with their iconic time mechanic...",
+    "releaseYear": 2000,
+    "developer": "Nintendo",
+    "playtime": 30,
+    "mustPlay": true,
+    "status": "Completed",
+    "coverArt": "https://m.media-amazon.com/images/M/MV5BYmM2NzI3NjItMTk4My00MWM4LTk3YjktMDljYWM4ODBkZTJjXkEyXkFqcGc@._V1_.jpg"
+
+},
+
+
+{
+    "title": "Hades",
+    "genre": ["Roguelike", "Fighting"],
+    "difficulty": "Hold Your Breath",
+    "rating": 8,
+    "review": "This game came out of nowhere and the success it got is no surprise. A fresh take on the roguelike genre...",
+    "releaseYear": 2019,
+    "developer": "Supergiant Games",
+    "playtime": 50,
+    "mustPlay": true,
+    "status": "Completed",
+    "coverArt": "https://upload.wikimedia.org/wikipedia/en/c/cc/Hades_cover_art.jpg"
+
+},
+
+
+{
+    "title": "Undertale",
+    "genre": ["RPG", "Adventure"],
+    "difficulty": "Hold Your Breath",
+    "rating": 8,
+    "review": "Undertale holds a special place in my heart. It is the first game I've ever 100%. Toby Fox...",
+    "releaseYear": 2015,
+    "developer": "Toby Fox",
+    "playtime": 70,
+    "mustPlay": true,
+    "status": "100%",
+    "coverArt": "https://m.media-amazon.com/images/M/MV5BMWY3ZTE2NDQtNWVhZS00ZjMwLTk1NTAtMDNmMzk4MzA1NGVhXkEyXkFqcGc@._V1_.jpg"
+
+},
+
+
+{
+    "title": "Payday 3",
+    "genre": ["First-person shooter", "RPG"],
+    "difficulty": "Enjoy the Story",
+    "rating": 0,
+    "review": "Payday 3 is an insult of what Payday 2 has created...",
+    "releaseYear": 2023,
+    "developer": "Starbreeze Studios",
+    "playtime": 8,
+    "mustPlay": false,
+    "status": "Dropped",
+    "coverArt": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Payday_3_cover_art.jpg/250px-Payday_3_cover_art.jpg"
+
+},
+
+
+{
+    "title": "Final Fantasy VII Remake",
+    "genre": ["RPG", "Fighting"],
+    "difficulty": "Enjoy the Story",
+    "rating": 4,
+    "review": "To an OG Final Fantasy fan, FF7 Remake is an insult. Although the graphics are beautiful and the story is expanded upon, the gameplay is a huge downgrade...",
+    "releaseYear": 2020,
+    "developer": "Square Enix",
+    "playtime": 30,
+    "mustPlay": false,
+    "status": "Dropped",
+    "coverArt": "https://upload.wikimedia.org/wikipedia/en/c/ce/FFVIIRemake.png"
+
+},
+
+
+{
+    "title": "Resident Evil 7: Biohazard",
+    "genre": ["Survival Horror", "Action"],
+    "difficulty": "Enjoy the Story",
+    "rating": 7,
+    "review": "When the survival horror genre was dying out, Resident Evil 7 marked the great revival for the genre. Capcom overhauled their formula and created a new unique style of resident evil we hadn't seen before.",
+    "releaseYear": 2017,
+    "developer": "Capcom",
+    "playtime": 100,
+    "mustPlay": true,
+    "status": "100%",
+    "coverArt": "https://upload.wikimedia.org/wikipedia/en/f/fd/Resident_Evil_7_cover_art.jpg"
+
+}
+
+]
