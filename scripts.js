@@ -1,85 +1,82 @@
+let nowSearch = "";
+let nowGenre = "all";
+let nowSort = "default";
+let nowMustPlay = false;
 
 fetch('games.json')
   .then(response => response.json())
   .then(games => {
     showCards(games);
-    let clicked = false;
 
     document.getElementById("search-bar").addEventListener("input", function() {
-      let filtered = [];
-      let query = this.value;
-      
-      for (let i = 0; i < games.length; i++){
-        if (games[i].title.toLowerCase().includes(query.toLowerCase())) {
-          filtered.push(games[i]);
-        }
-      }
-      showCards(filtered)
-
+      nowSearch = this.value;
+      applyUserChanges(games);
     })
 
     document.getElementById("sort-select").addEventListener("change", function() {
-      let sortValue = this.value;
-
-      const difficultyRank = {
-        "Plays Itself": 1,
-        "Enjoy the Story": 2,
-        "Hold Your Breath": 3,
-        "Monitor Breaker": 4
-      };
-      
-      const sortFunctions = {
-        "rating-high": function(a, b) {return b.rating - a.rating;},
-        "rating-low": function(a, b) {return a.rating - b.rating;},
-        "difficulty-high": function(a, b) {return difficultyRank[b.difficulty] - difficultyRank[a.difficulty];},
-        "difficulty-low": function(a, b) {return difficultyRank[a.difficulty] - difficultyRank[b.difficulty];},
-        "release-latest": function(a, b) {return b.releaseYear - a.releaseYear;},
-        "release-oldest": function(a, b) {return a.releaseYear - b.releaseYear;}
-      };
-
-      let sorted = [...games];
-      sorted.sort(sortFunctions[sortValue]); 
-      
-      showCards(sorted);
+      nowSort = this.value;
+      applyUserChanges(games);
     })  
     
     document.getElementById("genre-filter").addEventListener("change", function(){
-      let genreValue = this.value;
-      let filtered = []
-
-      if (genreValue === "all"){
-        showCards(games);
-        return;
-      }
-
-      for (let i = 0; i < games.length; i++){
-        if (games[i].genre.includes(genreValue)){
-          filtered.push(games[i])
-        }
-      }
-      showCards(filtered)
+      nowGenre = this.value;
+      applyUserChanges(games);
     })
 
     document.getElementById("mustplay-filter").addEventListener("click", function(){
-      let filtered = []
-      
-      if (clicked === false){
-        for (let i = 0; i < games.length; i++){
-        if (games[i].mustPlay === true){
-          filtered.push(games[i]);
-          }
-        }
-        clicked = true
-        showCards(filtered);
-      }
-      else{
-        showCards(games);
-        clicked = false
-      }
-
-    })
-
+      nowMustPlay = !nowMustPlay;
+      this.classList.toggle("active");
+      applyUserChanges(games);  
     });
+
+
+  });
+
+function applyUserChanges(games){
+  let result = [...games];
+
+  if (nowSearch){
+    result = result.filter(function(game){
+      return game.title.toLowerCase().includes(nowSearch.toLowerCase());
+    });
+  }
+
+  if (nowGenre !== "all"){
+    result = result.filter(function(game){
+      return game.genre.includes(nowGenre);
+    });
+  }
+
+  if (nowMustPlay){
+    result = result.filter(function(game) {
+      return game.mustPlay === true;
+    });
+  }
+
+  if (nowSort !== "default") {
+    const difficultyRank = {
+      "Plays Itself": 1,
+      "Enjoy the Story": 2,
+      "Hold Your Breath": 3,
+      "Monitor Breaker": 4
+    };
+    
+    const sortFunctions = {
+      "rating-high": function(a, b) {return b.rating - a.rating;},
+      "rating-low": function(a, b) {return a.rating - b.rating;},
+      "difficulty-high": function(a, b) {return difficultyRank[b.difficulty] - difficultyRank[a.difficulty];},
+      "difficulty-low": function(a, b) {return difficultyRank[a.difficulty] - difficultyRank[b.difficulty];},
+      "release-latest": function(a, b) {return b.releaseYear - a.releaseYear;},
+      "release-oldest": function(a, b) {return a.releaseYear - b.releaseYear;}
+    };
+    
+    result.sort(sortFunctions[nowSort]);
+  }
+
+showCards(result);
+
+
+}
 
 
 function showCards(games) {
