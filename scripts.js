@@ -108,6 +108,7 @@ function showCards(games) {
     if (game.mustPlay) {
       const badge = document.createElement("p");
       badge.textContent = "⭐ Daniel's Must Play";
+      badge.style.color = "#FFFC00";
       cardContent.insertBefore(badge, ul);
     }
 
