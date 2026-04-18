@@ -2,18 +2,19 @@ let nowSearch = "";
 let nowGenre = "all";
 let nowSort = "default";
 let nowMustPlay = false;
+let nowPlatform = "all";
 
 fetch('games.json')
   .then(response => response.json())
   .then(games => {
     showCards(games);
 
-    document.getElementById("search-bar").addEventListener("input", function() {
+    document.getElementById("search-bar").addEventListener("input", function(){
       nowSearch = this.value;
       applyUserChanges(games);
     })
 
-    document.getElementById("sort-select").addEventListener("change", function() {
+    document.getElementById("sort-select").addEventListener("change", function(){
       nowSort = this.value;
       applyUserChanges(games);
     })  
@@ -27,6 +28,11 @@ fetch('games.json')
       nowMustPlay = !nowMustPlay;
       this.classList.toggle("active");
       applyUserChanges(games);  
+    });
+
+    document.getElementById("platform-filter").addEventListener("change", function(){
+      nowPlatform = this.value;
+      applyUserChanges(games);
     });
 
 
@@ -44,6 +50,12 @@ function applyUserChanges(games){
   if (nowGenre !== "all"){
     result = result.filter(function(game){
       return game.genre.includes(nowGenre);
+    });
+  }
+
+  if (nowPlatform !== "all"){
+    result = result.filter(function(game){
+      return game.platform.includes(nowPlatform);
     });
   }
 
