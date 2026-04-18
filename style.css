@@ -93,6 +93,12 @@ body {
     cursor: pointer;
 }
 
+.badge {
+    color: #FFFC00;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
 #mustplay-filter:hover {
     background-color: #FFFC00;
     color: #000000;
@@ -121,7 +127,7 @@ body {
   border: 1px solid #333;
   border-top: 3px solid #FFFC00;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 4);
+  box-shadow: 0 4px 12px rgba(255, 252, 0, 0.15);
   margin: 5px;
 }
 
@@ -163,6 +169,13 @@ body {
 }
 
 
+.card-content .platform-logo {
+  width: auto;
+  height: 30px;
+  object-fit: contain;
+  margin-right: 5px;
+}
+
 
 button {
   text-align: center;
@@ -177,6 +190,7 @@ button {
   cursor: pointer;
   margin: 5px;
 }
+
 
 ul {
   padding: 0;

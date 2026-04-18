@@ -36,6 +36,9 @@ fetch('games.json')
     });
 
 
+  })
+  .catch(function(error){
+    console.log("Error: " + error);
   });
 
 function applyUserChanges(games){
@@ -120,7 +123,7 @@ function showCards(games) {
     if (game.mustPlay) {
       const badge = document.createElement("p");
       badge.textContent = "⭐ Daniel's Must Play";
-      badge.style.color = "#FFFC00";
+      badge.className = "badge";
       cardContent.insertBefore(badge, ul);
     }
 
@@ -146,10 +149,7 @@ function showCards(games) {
     for (let i = 0; i < game.platform.length; i++){
       const platItem = document.createElement("img");
       platItem.src = platform[game.platform[i]]
-      platItem.style.width = "auto";
-      platItem.style.height = "30px";
-      platItem.style.objectFit = "contain";
-      platItem.style.marginRight = "5px";
+      platItem.className = "platform-logo"
       cardContent.insertBefore(platItem, ul)
     }
     
