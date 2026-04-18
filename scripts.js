@@ -138,7 +138,9 @@ function showCards(games) {
       "STEAM": "assets/steam.png",
       "SWITCH": "assets/switch2.png",
       "N64": "assets/n64.png",
-      "WIIU": "assets/wiiu.png"
+      "WIIU": "assets/wiiu.png",
+      "WII": "assets/wii.png",
+      "RIOT": "assets/riot.png"
     };
 
     for (let i = 0; i < game.platform.length; i++){

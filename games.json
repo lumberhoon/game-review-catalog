@@ -51,6 +51,92 @@
 
 
 {
+    "title": "Resident Evil 2 (2019)",
+    "genre": ["Survival Horror", "Adventure"],
+    "difficulty": "Enjoy the Story",
+    "rating": 7,
+    "review": "Resident Evil 2 Remake is a remake done right. When remakes like Final Fantasy 7 like to prioritize stretching out the game into three parts and completely changing the battle mechanic to target a bigger audience, RE2 tries to stay faithful as much as possible. Remaking a game is difficult as it's not just trying to preserve the game one-to-one but rather trying to show a reimagination where it also doesn't strike too far from the original. RE2 strikes this balance well by keeping the general story beats the same while upgrading mechanics, graphics, and shifting locations of items so it still feels fresh to veterans. RE2 doesn't change the combat and perspective mechanics too much where it strays from the original, but it changes it from old tank controls to a 3rd person perspective. It essentially reintroduces their other game's mechanics into RE2 which makes it feel like it's how the game was envisioned from the start of the original production. The game is quite short and I feel like more could've been done with the second playthrough of the game. I beat it in one night and although I really enjoyed it I was left feeling like there could've been more inclusions to the game while also staying faithful to the source material. I give Resident Evil 2 Remake 7bits out of Byte.",
+    "releaseYear": 2019,
+    "developer": "Capcom",
+    "platform": ["PS5", "XBOX", "STEAM"],
+    "playtime": 21,
+    "mustPlay": false,
+    "status": "Completed",
+    "coverArt": "https://image.api.playstation.com/vulcan/ap/rnd/202206/0204/uDFoGvnMTTCLVmTwjj0njGWC.png"
+
+},
+
+
+{
+    "title": "Tom Clancy's Rainbow Six Siege",
+    "genre": ["First-person shooter", "Action"],
+    "difficulty": "Hold Your Breath",
+    "rating": 6,
+    "review": "Tom Clancy's Rainbow Six Siege is where I was introduced to e-sports. It fueled my competitive drive and made me become the person I am today. I played this game for hours on end and even when I quit, I took the same mentality for other competitive FPS games and reached the highest rank in whatever I played. If it weren't for R6, I wouldn't have competed in tournaments for other games and gotten the experience of professional esports. The gameplay is uniquely designed unlike any other FPS I've played, but recent updates have made the game a lot less fun. Overall, I give it a 6bits out of Byte.",
+    "releaseYear": 2016,
+    "developer": "Ubisoft Montreal",
+    "platform": ["PS5", "STEAM", "XBOX"],
+    "playtime": 1600,
+    "mustPlay": false,
+    "status": "Completed",
+    "coverArt": "https://store-images.s-microsoft.com/image/apps.29593.65170969132831011.a13a22f3-5325-489a-9982-552262e2f09b.5f13bce4-c8b9-4b07-abba-2b72a2037ee0"
+
+},
+
+
+
+{
+    "title": "Dark Souls III",
+    "genre": ["Soulslike", "Adventure"],
+    "difficulty": "Monitor Breaker",
+    "rating": 8,
+    "review": "Dark Souls III is definitely my favorite Soulslike game of all time. Out of all FromSoftware games I think that DS3 has perfectly balanced the difficulty in a way where it’s earned from the enemy’s standpoint. Every death gives a learning experience where the answer isn’t just BS. That does not make it any easier than other Soulslike games as it’s still one of the most challenging. The music and the bosses are the best out of any Soulslike game I’ve ever played. The ruined-world atmosphere is absolutely beautiful and sometimes terrifying. Undead Settlement gave me the most quiet but terrifying feeling throughout my adventure. Once I got to the Twin Princes, I knew this game was the best out of the whole series. Overall I give this game a BYTE!",
+    "releaseYear": 2016,
+    "developer": "FromSoftware",
+    "platform": ["PS5", "XBOX", "STEAM"],
+    "playtime": 90,
+    "mustPlay": true,
+    "status": "Completed",
+    "coverArt": "https://m.media-amazon.com/images/M/MV5BNzQzODQ3YzktNTM1Yy00NmNmLTk3NTItNGVlY2M1MzI4MjQ0XkEyXkFqcGc@._V1_.jpg"
+
+},
+
+
+{
+    "title": "Resident Evil 7: Biohazard",
+    "genre": ["Survival Horror", "Action"],
+    "difficulty": "Enjoy the Story",
+    "rating": 7,
+    "review": "When the survival horror genre was dying out, Resident Evil 7 marked the great revival for the genre. Capcom overhauled their formula and created a new unique style of resident evil we hadn't seen before. We were introduced to a new character, Ethan Winters, we are playing on the new REEngine that drastically improved visuals, and the first-person perspective. Everything that people didn’t like about Resident Evil 6 was removed and Capcom returned to the classic Resident Evil formula. The dark, moldy, and broken home aesthetic is well done and definitely kept me on my toes my whole playthrough. The only downside of RE7 is the lack of monsters we face during our playthrough. The mold monsters are scary at first but then every single other monster we face are molded variants which we eventually get numb to. Although the lack of diverse monsters is disappointing, the gameplay, scare factor, and the impact it has made on the survival horror genre is massive. I give it a 7bits out of Byte!",
+    "releaseYear": 2017,
+    "developer": "Capcom",
+    "platform": ["PS5", "XBOX", "STEAM", "SWITCH"],
+    "playtime": 100,
+    "mustPlay": true,
+    "status": "100%",
+    "coverArt": "https://m.media-amazon.com/images/M/MV5BN2UwMWE5NTEtM2NhZC00YThjLWE0NWItNTRkNmFlNDNkNjBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+
+},
+
+
+{
+    "title": "Valorant",
+    "genre": ["First-person shooter", "Action"],
+    "difficulty": "Hold Your Breath",
+    "rating": 5,
+    "review": "I have a deep love and hate relationship with Valorant. I hit the highest rank and competed in small tournaments for it, but I find myself wanting to break my monitor all the time from playing this game. The game excels at rewarding skilled play and feels like the most fair out of all competitive esport titles I have played. What lacks in the game is how sluggish the movement feels even after 2000 hours of playing, the playerbase (oh god), and the direction of recent updates. It seems like Riot doesn't have a clue on how to expand the game more as the new maps and characters introduced are just copies of the past. Even though I have played this game the most out of any titles, I can only safely say its 5bits out of Byte.",
+    "releaseYear": 2021,
+    "developer": "Riot Games",
+    "platform": ["PS5", "XBOX", "RIOT"],
+    "playtime": 2000,
+    "mustPlay": false,
+    "status": "Completed",
+    "coverArt": "https://m.media-amazon.com/images/I/71LTpSLz57L._AC_UF894,1000_QL80_.jpg"
+
+},
+
+
+{
     "title": "Resident Evil Village",
     "genre": ["Survival Horror", "Action"],
     "difficulty": "Enjoy the Story",
@@ -84,23 +170,21 @@
 
 },
 
-
 {
-    "title": "Dark Souls III",
-    "genre": ["Soulslike", "Adventure"],
-    "difficulty": "Monitor Breaker",
+    "title": "Super Mario Galaxy 2",
+    "genre": ["Platformer", "Adventure"],
+    "difficulty": "Enjoy the Story",
     "rating": 8,
-    "review": "Dark Souls III is definitely my favorite Soulslike game of all time. Out of all FromSoftware games I think that DS3 has perfectly balanced the difficulty in a way where it’s earned from the enemy’s standpoint. Every death gives a learning experience where the answer isn’t just BS. That does not make it any easier than other Soulslike games as it’s still one of the most challenging. The music and the bosses are the best out of any Soulslike game I’ve ever played. The ruined-world atmosphere is absolutely beautiful and sometimes terrifying. Undead Settlement gave me the most quiet but terrifying feeling throughout my adventure. Once I got to the Twin Princes, I knew this game was the best out of the whole series. Overall I give this game a BYTE!",
-    "releaseYear": 2016,
-    "developer": "FromSoftware",
-    "platform": ["PS5", "XBOX", "STEAM"],
-    "playtime": 90,
+    "review": "Super Mario Galaxy 2 is the first game I’ve ever played. I was only 6 years old when the game came out and I still remember vividly exploring the different galaxies in the game. The gravity mechanic in the game is amazing and gives the game a refreshing version of Mario we hadn’t seen before. The graphics of the game still hold up after 16 years and only required an upscale for future remastered releases. The amount of attention and care that was put into Super Mario Galaxy 2 gives it a deserving BYTE!",
+    "releaseYear": 2010,
+    "developer": "Nintendo",
+    "platform": ["WII", "WIIU", "SWITCH"],
+    "playtime": 50,
     "mustPlay": true,
-    "status": "Completed",
-    "coverArt": "https://m.media-amazon.com/images/M/MV5BNzQzODQ3YzktNTM1Yy00NmNmLTk3NTItNGVlY2M1MzI4MjQ0XkEyXkFqcGc@._V1_.jpg"
+    "status": "100%",
+    "coverArt": "https://m.media-amazon.com/images/I/819iId7+53L._AC_UF1000,1000_QL80_.jpg"
 
 },
-
 
 {
     "title": "Final Fantasy VII Remake",
@@ -118,22 +202,6 @@
 
 },
 
-
-{
-    "title": "Resident Evil 7: Biohazard",
-    "genre": ["Survival Horror", "Action"],
-    "difficulty": "Enjoy the Story",
-    "rating": 7,
-    "review": "When the survival horror genre was dying out, Resident Evil 7 marked the great revival for the genre. Capcom overhauled their formula and created a new unique style of resident evil we hadn't seen before. We were introduced to a new character, Ethan Winters, we are playing on the new REEngine that drastically improved visuals, and the first-person perspective. Everything that people didn’t like about Resident Evil 6 was removed and Capcom returned to the classic Resident Evil formula. The dark, moldy, and broken home aesthetic is well done and definitely kept me on my toes my whole playthrough. The only downside of RE7 is the lack of monsters we face during our playthrough. The mold monsters are scary at first but then every single other monster we face are molded variants which we eventually get numb to. Although the lack of diverse monsters is disappointing, the gameplay, scare factor, and the impact it has made on the survival horror genre is massive. I give it a 7bits out of Byte!",
-    "releaseYear": 2017,
-    "developer": "Capcom",
-    "platform": ["PS5", "XBOX", "STEAM", "SWITCH"],
-    "playtime": 100,
-    "mustPlay": true,
-    "status": "100%",
-    "coverArt": "https://m.media-amazon.com/images/M/MV5BN2UwMWE5NTEtM2NhZC00YThjLWE0NWItNTRkNmFlNDNkNjBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-
-},
 
 
 {
@@ -168,6 +236,7 @@
     "coverArt": "https://www.rpgfan.com/wp-content/uploads/2020/08/Hades-Cover-Art.jpg"
 
 },
+
 
 
 {
