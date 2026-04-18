@@ -133,7 +133,7 @@ function showCards(games) {
     cardContent.insertBefore(devItem, ul)
 
     const platform = {
-      "PS5": "assets/ps.avif",
+      "PS5": "assets/ps.png",
       "XBOX": "assets/xbox.png",
       "STEAM": "assets/steam.png",
       "SWITCH": "assets/switch2.png",
